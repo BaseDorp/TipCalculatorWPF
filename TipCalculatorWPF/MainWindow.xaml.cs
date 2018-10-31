@@ -22,6 +22,7 @@ namespace TipCalculatorWPF
     {
         public MainWindow()
         {
+            // I made this comment to be able to commit
             InitializeComponent();
         }
     }
