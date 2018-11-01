@@ -25,5 +25,24 @@ namespace TipCalculatorWPF
             // I made this comment to be able to commit
             InitializeComponent();
         }
+
+        private void bt_Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            // Variables
+            double Bill;
+            double Percent = 15;
+            double Total;
+
+            // Makes the Percent entered a decimal
+            Percent = Percent / 100;
+
+
+            Bill = Convert.ToDouble(in_BillAmount.Text);
+            Total = Bill + Bill * Percent;
+
+            // Sets the txt box 'Total' as the Total variable but as a string
+            Convert.ToString(Total);
+            txt_Total.Text = "Your total with tip is $" + Total;
+        }
     }
 }

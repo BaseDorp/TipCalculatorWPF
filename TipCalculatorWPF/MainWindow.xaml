@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TipCalculatorWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="480" Width="320">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="White"/>
+            <GradientStop Color="#FFB32222" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="154*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txt_BillAmount" Margin="10,80,27.2,0" TextWrapping="Wrap" Text="Bill Amount: " VerticalAlignment="Top" Height="31" Cursor="Cross" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="in_BillAmount" HorizontalAlignment="Left" Height="31" Margin="132,80,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="172" FontSize="18" Grid.ColumnSpan="2" Background="Transparent" BorderBrush="#00ABADB3"/>
+        <TextBlock x:Name="txt_BillTotal" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="Bill Total: " VerticalAlignment="Top" Height="31" Width="122" Cursor="Cross" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="bt_Calculate" Grid.ColumnSpan="2" Content="Calculate" HorizontalAlignment="Left" Margin="69,157,0,0" VerticalAlignment="Top" Width="178" Height="86" FontFamily="Sitka Text" FontSize="20" Click="bt_Calculate_Click"/>
+        <TextBlock x:Name="txt_Total" HorizontalAlignment="Left" Margin="10,332,0,0" TextWrapping="Wrap" Text="Bill Total: " VerticalAlignment="Top" Height="67" Width="294" Cursor="Cross" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>
