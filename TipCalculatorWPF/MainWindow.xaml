@@ -1,11 +1,11 @@
-﻿<Window x:Class="TipCalculatorWPF.MainWindow"
+﻿<Window x:Name="Window" x:Class="TipCalculatorWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TipCalculatorWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="320">
+        Title="Tip Calculator" Height="480" Width="320">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="White"/>
@@ -14,14 +14,17 @@
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="144*"/>
             <ColumnDefinition Width="154*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txt_BillAmount" Margin="10,80,27.2,0" TextWrapping="Wrap" Text="Bill Amount: " VerticalAlignment="Top" Height="31" Cursor="Cross" FontSize="20" FontWeight="Bold"/>
-        <TextBox x:Name="in_BillAmount" HorizontalAlignment="Left" Height="31" Margin="132,80,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="172" FontSize="18" Grid.ColumnSpan="2" Background="Transparent" BorderBrush="#00ABADB3"/>
-        <TextBlock x:Name="txt_BillTotal" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="Bill Total: " VerticalAlignment="Top" Height="31" Width="122" Cursor="Cross" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="bt_Calculate" Grid.ColumnSpan="2" Content="Calculate" HorizontalAlignment="Left" Margin="69,157,0,0" VerticalAlignment="Top" Width="178" Height="86" FontFamily="Sitka Text" FontSize="20" Click="bt_Calculate_Click"/>
-        <TextBlock x:Name="txt_Total" HorizontalAlignment="Left" Margin="10,332,0,0" TextWrapping="Wrap" Text="Bill Total: " VerticalAlignment="Top" Height="67" Width="294" Cursor="Cross" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txt_BillAmount" Margin="10,45,138.6,0" TextWrapping="Wrap" Text="Bill Amount: " VerticalAlignment="Top" Height="31" Cursor="Cross" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="in_BillAmount" HorizontalAlignment="Left" Height="31" Margin="20.8,45,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="124" FontSize="18" Background="Transparent" BorderBrush="#00ABADB3" Grid.Column="2" GotFocus="in_BillAmount_GotFocus"/>
+        <TextBlock x:Name="txt_BillTotal" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="Bill Total: " VerticalAlignment="Top" Height="31" Width="122" Cursor="Cross" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="bt_Calculate" Grid.ColumnSpan="2" Content="Calculate" HorizontalAlignment="Left" Margin="54.09,146,0,0" VerticalAlignment="Top" Width="178" Height="86" FontFamily="Sitka Text" FontSize="20" Click="bt_Calculate_Click" Grid.Column="1"/>
+        <TextBlock x:Name="txt_Total" HorizontalAlignment="Left" Margin="10,332,0,0" TextWrapping="Wrap" Text="$" VerticalAlignment="Top" Height="67" Width="294" Cursor="Cross" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="3" TextAlignment="Center"/>
+        <TextBlock x:Name="txt_PercentAmount" Margin="9,76,133.6,0" TextWrapping="Wrap" Text="Percent Amount: " VerticalAlignment="Top" Height="31" Cursor="Cross" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="in_PercentAmount" HorizontalAlignment="Left" Height="31" Margin="20.8,76,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="124" FontSize="18" Background="Transparent" BorderBrush="#00ABADB3" Grid.Column="2" GotFocus="in_PercentAmount_GotFocus"/>
 
     </Grid>
 </Window>
